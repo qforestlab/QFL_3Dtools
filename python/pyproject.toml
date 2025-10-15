@@ -1,0 +1,31 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "qfl3dtools"
+version = "0.0.1"
+authors = [
+  { name="Wouter Van den Broeck", email="wouter.vandenbroeck@ugent.be"},
+]
+description = "Toolbox used at Q-ForestLab containing functionality for processing of point clouds and meshes"
+# readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+  "open3d>=0.17.0",
+]
+keywords = [
+  "point cloud",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/qforestlab/QFL_3Dtools"
+# Documentation = ""
+
+[tool.hatch.build]
