@@ -80,13 +80,13 @@ def files_to_ply(input_dir, output_dir):
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
 
-    # Iterate through txt files in input directory
+    # Iterate through files in input directory
     for filename in os.listdir(input_dir):
         if filename.endswith('.las'):
             input_file = os.path.join(input_dir, filename)
             output_file = os.path.join(output_dir, filename.replace('.las', '.ply'))
             read_pc_np(input_file, output_file)
-        elif filename.endswith('.txt'):
+        elif filename.endswith('.laz'):
             input_file = os.path.join(input_dir, filename)
             output_file = os.path.join(output_dir, filename.replace('.laz', '.ply'))
             read_pc_np(input_file, output_file)
